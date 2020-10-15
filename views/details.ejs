@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+		<a href="/">Back to Home Page</a>
+
+		<h1>You made it here</h1>
+		<div>
+			<% data.forEach(function(image){ %>
+			  <div>
+				<div>
+					<img src="data:image/<%=image.img.contentType%>;base64,<%=image.img.data.toString('base64')%>" width="150" height="150">
+					<div>
+						<h5><%= image.name %></h5>
+						<p><%= image.desc %></p>
+					</div>
+				</div>
+			 </div>
+		<%	}) %>
+		</div>
+
+
+</body>
+</html>
+
+
+
+
+
